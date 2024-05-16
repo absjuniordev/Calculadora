@@ -1,4 +1,4 @@
-# Calculadora Flutter
+# Calculadora 
 
 Uma aplicação simples de calculadora desenvolvida em Flutter, compatível com Android e iOS, que realiza as quatro operações básicas: adição, subtração, multiplicação e divisão.
 
