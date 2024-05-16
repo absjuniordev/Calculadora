@@ -22,11 +22,11 @@ class Display extends StatelessWidget {
                 maxLines: 1,
                 text,
                 textAlign: TextAlign.end,
-                style: TextStyle(
-                  fontWeight: FontWeight.w100,
-                  decoration: TextDecoration.none,
-                  fontSize: 80,
-                ),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w100,
+                    decoration: TextDecoration.none,
+                    fontSize: 80,
+                    color: Colors.white),
               ),
             ),
           ],
