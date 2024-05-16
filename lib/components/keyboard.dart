@@ -7,7 +7,7 @@ class Keyboard extends StatelessWidget {
   final void Function(String) cb;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 500,
       child: Column(
         children: [
