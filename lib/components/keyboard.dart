@@ -24,7 +24,7 @@ class Keyboard extends StatelessWidget {
               Button(text: "7", cb: cb),
               Button(text: "8", cb: cb),
               Button(text: "9", cb: cb),
-              Button.operatio(text: "X", cb: cb),
+              Button.operatio(text: "x", cb: cb),
             ],
           ),
           const SizedBox(height: 1),
@@ -39,9 +39,9 @@ class Keyboard extends StatelessWidget {
           const SizedBox(height: 1),
           ButtonRow(
             buttons: [
-              Button(text: "3", cb: cb),
-              Button(text: "2", cb: cb),
               Button(text: "1", cb: cb),
+              Button(text: "2", cb: cb),
+              Button(text: "3", cb: cb),
               Button.operatio(text: "+", cb: cb),
             ],
           ),

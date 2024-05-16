@@ -29,7 +29,7 @@ class _CalculatorState extends State<Calculator> {
       debugShowCheckedModeBanner: false,
       home: Column(
         children: [
-          Display(text: memory.valeu),
+          Display(text: memory.value),
           Keyboard(cb: _onPressed),
         ],
       ),
