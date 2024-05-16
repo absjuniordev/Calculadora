@@ -7,6 +7,18 @@ class Keyboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
+      child: Column(
+        children: [
+          ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0.0),
+                ),
+              ),
+              child: Text("1")),
+        ],
+      ),
     );
   }
 }
