@@ -3,7 +3,7 @@ class Memory {
 
   final _buffer = [0.0, 0.0];
   int _bufferIndex = 0;
-  late String operation;
+  late String _operation;
   String _value = "0";
   bool _wipeValue = false;
 
@@ -22,6 +22,15 @@ class Memory {
   }
 
   _setOperation(String newOperation) {
+    if (_bufferIndex == 0) {
+      _operation = newOperation;
+      _bufferIndex = 1;
+    } else {
+      _buffer[0] = _calculation();
+      _buffer[1] = 0.0;
+      _value = _buffer[0].toString();
+      _value = _value.endsWith(".0") ? _value.split('.')[0] : _value;
+    }
     _wipeValue = true;
   }
 
@@ -37,9 +46,27 @@ class Memory {
     final currentValeu = wipeValeu ? emptyValue : _value;
     _value = currentValeu + digit;
     _wipeValue = false;
+
+    _buffer[_bufferIndex] = double.tryParse(_value) ?? 0;
+    print(_buffer);
   }
 
   void _allClear() {
     _value = "0";
+  }
+
+  _calculation() {
+    switch (_operation) {
+      case '%':
+        return _buffer[0] % _buffer[1];
+      case '/':
+        return _buffer[0] / _buffer[1];
+      case 'X':
+        return _buffer[0] * _buffer[1];
+      case '-':
+        return _buffer[0] - _buffer[1];
+      case '+':
+        return _buffer[0] + _buffer[1];
+    }
   }
 }
