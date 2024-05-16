@@ -1,3 +1,5 @@
+import 'package:calculadora/components/button.dart';
+import 'package:calculadora/components/button_row.dart';
 import 'package:flutter/material.dart';
 
 class Keyboard extends StatelessWidget {
@@ -7,16 +9,46 @@ class Keyboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      child: Column(
+      child: const Column(
         children: [
-          ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0.0),
-                ),
-              ),
-              child: Text("1")),
+          ButtonRow(
+            buttons: [
+              Button(text: "AC"),
+              Button(text: "%"),
+              Button(text: "/"),
+            ],
+          ),
+          ButtonRow(
+            buttons: [
+              Button(text: "7"),
+              Button(text: "8"),
+              Button(text: "9"),
+              Button(text: "X"),
+            ],
+          ),
+          ButtonRow(
+            buttons: [
+              Button(text: "4"),
+              Button(text: "5"),
+              Button(text: "6"),
+              Button(text: "-"),
+            ],
+          ),
+          ButtonRow(
+            buttons: [
+              Button(text: "3"),
+              Button(text: "2"),
+              Button(text: "1"),
+              Button(text: "+"),
+            ],
+          ),
+          ButtonRow(
+            buttons: [
+              Button(text: "0"),
+              Button(text: "."),
+              Button(text: "="),
+            ],
+          ),
         ],
       ),
     );
