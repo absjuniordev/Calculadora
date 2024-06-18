@@ -1,6 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="br.com.absjuniordev.calculadora">
     <application
-        android:label="calculadora"
+        android:label="Calculadora TOP"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
